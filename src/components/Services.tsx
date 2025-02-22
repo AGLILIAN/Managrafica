@@ -1,37 +1,37 @@
 
 import { Card } from "./ui/card";
-import { Printer, Image, FileText, Book, Package, Calendar } from "lucide-react";
+import { Sticker, Building2, Image, Flag, Printer, Palette } from "lucide-react";
 
 const services = [
   {
-    icon: Printer,
-    title: "Impressão Digital",
-    description: "Alta qualidade em pequenas e grandes tiragens",
+    icon: Sticker,
+    title: "Adesivos",
+    description: "Adesivos personalizados em diversos tamanhos e acabamentos",
+  },
+  {
+    icon: Building2,
+    title: "Fachadas Personalizadas",
+    description: "Projetos completos de fachadas com materiais de alta qualidade",
   },
   {
     icon: Image,
-    title: "Banners e Lonas",
+    title: "Banners e Bandeirolas",
     description: "Impressão em grande formato com cores vibrantes",
   },
   {
-    icon: FileText,
-    title: "Material Corporativo",
-    description: "Cartões de visita, papel timbrado e envelopes",
+    icon: Printer,
+    title: "Plotagens",
+    description: "Plotagem em diversos materiais e superfícies",
   },
   {
-    icon: Book,
-    title: "Encadernação",
-    description: "Diversos tipos de acabamento disponíveis",
+    icon: Palette,
+    title: "Identidade Visual",
+    description: "Desenvolvimento completo da sua marca",
   },
   {
-    icon: Package,
-    title: "Embalagens",
-    description: "Desenvolvimento e produção personalizada",
-  },
-  {
-    icon: Calendar,
-    title: "Calendários",
-    description: "Personalizados para sua empresa",
+    icon: Flag,
+    title: "LED Neon",
+    description: "Letreiros e painéis em LED neon personalizados",
   },
 ];
 
@@ -42,7 +42,7 @@ const Services = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-4xl font-bold text-accent-dark mb-4">Nossos Serviços</h2>
           <p className="text-accent">
-            Oferecemos uma ampla gama de serviços de impressão para atender todas as suas necessidades
+            Soluções completas em comunicação visual para sua empresa
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

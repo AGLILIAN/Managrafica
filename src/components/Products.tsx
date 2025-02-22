@@ -5,28 +5,28 @@ import { ShoppingCart } from "lucide-react";
 
 const products = [
   {
-    title: "Cartão de Visita Premium",
-    description: "Impressão em papel couché 300g com acabamento especial",
-    price: "R$ 89,90",
+    title: "Fachada Completa",
+    description: "Projeto e execução de fachada com iluminação LED",
+    price: "Sob consulta",
     image: "/placeholder.svg",
   },
   {
-    title: "Banner Lona 440g",
-    description: "Impressão digital de alta qualidade com acabamento",
+    title: "Banner em Lona",
+    description: "Impressão digital em lona 440g com acabamento",
     price: "R$ 59,90/m²",
     image: "/placeholder.svg",
   },
   {
-    title: "Flyers A5",
-    description: "1000 unidades em papel couché 115g",
-    price: "R$ 199,90",
+    title: "Cardápio Premium",
+    description: "Cardápios personalizados com design exclusivo",
+    price: "A partir de R$ 89,90",
     image: "/placeholder.svg",
   },
 ];
 
 const Products = () => {
   const handleOrder = (product: string) => {
-    const message = `Olá! Gostaria de fazer um pedido do produto: ${product}`;
+    const message = `Olá! Gostaria de fazer um orçamento para: ${product}`;
     window.location.href = `https://wa.me/5541998783857?text=${encodeURIComponent(message)}`;
   };
 
@@ -36,7 +36,7 @@ const Products = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-4xl font-bold text-accent-dark mb-4">Produtos em Destaque</h2>
           <p className="text-accent">
-            Conheça alguns dos nossos produtos mais populares
+            Conheça algumas das nossas soluções mais populares
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,7 +60,7 @@ const Products = () => {
                     className="group"
                   >
                     <ShoppingCart className="mr-2 h-4 w-4" />
-                    Pedir
+                    Orçamento
                   </Button>
                 </div>
               </div>

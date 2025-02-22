@@ -1,5 +1,5 @@
 
-import { Printer, ShoppingCart } from "lucide-react";
+import { Image, ShoppingCart } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Header = () => {
@@ -8,8 +8,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <Printer className="h-6 w-6 text-primary" />
-            <span className="font-semibold text-xl">PrintExpress</span>
+            <Image className="h-6 w-6 text-primary" />
+            <span className="font-semibold text-xl">Maná Comunicação Visual</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#inicio" className="text-accent-dark hover:text-primary transition-colors">

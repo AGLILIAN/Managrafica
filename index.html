@@ -1,18 +1,284 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>quick-print-order</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
-  </head>
+    <title>Maná Comunicação Visual</title>
+    <meta name="description" content="Soluções em comunicação visual para sua empresa" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
+      .animate-fade-up {
+        animation: fadeUp 0.5s ease-out forwards;
+      }
+
+      .group:hover .group-hover\:translate-x-1 {
+        transform: translateX(0.25rem);
+      }
+
+      .group:hover .group-hover\:scale-110 {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
   <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-[#0EA5E9]">
+              <path d="M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6"></path>
+              <path d="m12 12 4 10 1.7-4.3L22 16Z"></path>
+            </svg>
+            <span class="font-semibold text-xl">Maná Comunicação Visual</span>
+          </div>
+          <nav class="hidden md:flex items-center space-x-8">
+            <a href="#inicio" class="text-[#222222] hover:text-[#0EA5E9] transition-colors">Início</a>
+            <a href="#servicos" class="text-[#222222] hover:text-[#0EA5E9] transition-colors">Serviços</a>
+            <a href="#produtos" class="text-[#222222] hover:text-[#0EA5E9] transition-colors">Produtos</a>
+            <a href="#contato" class="text-[#222222] hover:text-[#0EA5E9] transition-colors">Contato</a>
+          </nav>
+          <button onclick="handleOrder()" class="hidden md:flex items-center gap-2 bg-[#0EA5E9] text-white px-4 py-2 rounded-md hover:bg-[#0EA5E9]/90 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="21" r="1"></circle>
+              <circle cx="19" cy="21" r="1"></circle>
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+            </svg>
+            Fazer Pedido
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section id="inicio" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f8f9fa] to-white pt-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center space-y-8 animate-fade-up">
+          <h1 class="text-5xl md:text-6xl font-bold text-[#222222]">
+            Comunicação Visual
+            <span class="text-[#0EA5E9]">de Impacto</span>
+          </h1>
+          <p class="text-xl text-[#868e96] leading-relaxed">
+            Transformando sua identidade visual em realidade com soluções criativas e profissionais.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button onclick="handleOrder()" class="group bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white px-8 py-6 text-lg rounded-md transition-colors">
+              Solicitar Orçamento
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 inline-block transition-transform group-hover:translate-x-1">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-[#f8f9fa]">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold text-[#222222] mb-4">Nossos Serviços</h2>
+          <p class="text-[#868e96]">
+            Soluções completas em comunicação visual para sua empresa
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Serviços -->
+          <div class="rounded-lg border bg-white/50 backdrop-blur-sm p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-[#0EA5E9] mb-4">
+              <path d="M15.5 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V8.5L15.5 3Z"></path>
+              <path d="M15 3v6h6"></path>
+            </svg>
+            <h3 class="text-xl font-semibold text-[#222222] mb-2">Adesivos</h3>
+            <p class="text-[#868e96]">Adesivos personalizados em diversos tamanhos e acabamentos</p>
+          </div>
+
+          <div class="rounded-lg border bg-white/50 backdrop-blur-sm p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-[#0EA5E9] mb-4">
+              <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+              <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+              <path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"></path>
+              <path d="M10 2h4"></path>
+              <path d="M10 6h4"></path>
+              <path d="M10 10h4"></path>
+            </svg>
+            <h3 class="text-xl font-semibold text-[#222222] mb-2">Fachadas Personalizadas</h3>
+            <p class="text-[#868e96]">Projetos completos de fachadas com materiais de alta qualidade</p>
+          </div>
+
+          <div class="rounded-lg border bg-white/50 backdrop-blur-sm p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-[#0EA5E9] mb-4">
+              <path d="M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6"></path>
+              <path d="m12 12 4 10 1.7-4.3L22 16Z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold text-[#222222] mb-2">Banners e Bandeirolas</h3>
+            <p class="text-[#868e96]">Impressão em grande formato com cores vibrantes</p>
+          </div>
+
+          <div class="rounded-lg border bg-white/50 backdrop-blur-sm p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-[#0EA5E9] mb-4">
+              <path d="M6 17h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"></path>
+              <path d="M8 21h8"></path>
+              <path d="M12 17v4"></path>
+            </svg>
+            <h3 class="text-xl font-semibold text-[#222222] mb-2">Plotagens</h3>
+            <p class="text-[#868e96]">Plotagem em diversos materiais e superfícies</p>
+          </div>
+
+          <div class="rounded-lg border bg-white/50 backdrop-blur-sm p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-[#0EA5E9] mb-4">
+              <circle cx="13.5" cy="6.5" r=".5"></circle>
+              <circle cx="17.5" cy="10.5" r=".5"></circle>
+              <circle cx="8.5" cy="7.5" r=".5"></circle>
+              <circle cx="6.5" cy="12.5" r=".5"></circle>
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold text-[#222222] mb-2">Identidade Visual</h3>
+            <p class="text-[#868e96]">Desenvolvimento completo da sua marca</p>
+          </div>
+
+          <div class="rounded-lg border bg-white/50 backdrop-blur-sm p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-[#0EA5E9] mb-4">
+              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+              <line x1="4" x2="4" y1="22" y2="15"></line>
+            </svg>
+            <h3 class="text-xl font-semibold text-[#222222] mb-2">LED Neon</h3>
+            <p class="text-[#868e96]">Letreiros e painéis em LED neon personalizados</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produtos" class="py-24">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold text-[#222222] mb-4">Produtos em Destaque</h2>
+          <p class="text-[#868e96]">
+            Conheça algumas das nossas soluções mais populares
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Produtos -->
+          <div class="rounded-lg border overflow-hidden group">
+            <div class="aspect-video relative overflow-hidden">
+              <img
+                src="/placeholder.svg"
+                alt="Fachada Completa"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-[#222222] mb-2">Fachada Completa</h3>
+              <p class="text-[#868e96] mb-4">Projeto e execução de fachada com iluminação LED</p>
+              <div class="flex items-center justify-between">
+                <span class="text-[#0EA5E9] font-semibold">Sob consulta</span>
+                <button
+                  onclick="handleProductOrder('Fachada Completa')"
+                  class="inline-flex items-center gap-2 border border-[#e5e7eb] rounded-md px-4 py-2 text-[#222222] hover:bg-[#f8f9fa] transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8" cy="21" r="1"></circle>
+                    <circle cx="19" cy="21" r="1"></circle>
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                  </svg>
+                  Orçamento
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg border overflow-hidden group">
+            <div class="aspect-video relative overflow-hidden">
+              <img
+                src="/placeholder.svg"
+                alt="Banner em Lona"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-[#222222] mb-2">Banner em Lona</h3>
+              <p class="text-[#868e96] mb-4">Impressão digital em lona 440g com acabamento</p>
+              <div class="flex items-center justify-between">
+                <span class="text-[#0EA5E9] font-semibold">R$ 59,90/m²</span>
+                <button
+                  onclick="handleProductOrder('Banner em Lona')"
+                  class="inline-flex items-center gap-2 border border-[#e5e7eb] rounded-md px-4 py-2 text-[#222222] hover:bg-[#f8f9fa] transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8" cy="21" r="1"></circle>
+                    <circle cx="19" cy="21" r="1"></circle>
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                  </svg>
+                  Orçamento
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg border overflow-hidden group">
+            <div class="aspect-video relative overflow-hidden">
+              <img
+                src="/placeholder.svg"
+                alt="Cardápio Premium"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-[#222222] mb-2">Cardápio Premium</h3>
+              <p class="text-[#868e96] mb-4">Cardápios personalizados com design exclusivo</p>
+              <div class="flex items-center justify-between">
+                <span class="text-[#0EA5E9] font-semibold">A partir de R$ 89,90</span>
+                <button
+                  onclick="handleProductOrder('Cardápio Premium')"
+                  class="inline-flex items-center gap-2 border border-[#e5e7eb] rounded-md px-4 py-2 text-[#222222] hover:bg-[#f8f9fa] transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8" cy="21" r="1"></circle>
+                    <circle cx="19" cy="21" r="1"></circle>
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                  </svg>
+                  Orçamento
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a
+      href="https://wa.me/5541998783857?text=Olá! Gostaria de fazer um pedido."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 z-50 bg-[#51cf66] text-white p-4 rounded-full shadow-lg hover:bg-[#51cf66]/90 transition-all duration-300 hover:scale-110"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 9a2 2 0 0 0-2-2H6l-4 4 4 4h6a2 2 0 0 0 2-2V9Z"></path>
+        <path d="M18 9h2l4 4-4 4h-2"></path>
+      </svg>
+    </a>
+
+    <script>
+      function handleOrder() {
+        window.location.href = `https://wa.me/5541998783857?text=${encodeURIComponent(
+          "Olá! Gostaria de fazer um pedido."
+        )}`;
+      }
+
+      function handleProductOrder(product) {
+        const message = `Olá! Gostaria de fazer um orçamento para: ${product}`;
+        window.location.href = `https://wa.me/5541998783857?text=${encodeURIComponent(message)}`;
+      }
+    </script>
   </body>
 </html>

@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // Use o nome do seu repositório aqui
-  base: "/mana-comunicacao-visual/",
+  base: "/https://aglilian.github.io/Managrafica/",
   server: {
     host: "::",
     port: 8080,
